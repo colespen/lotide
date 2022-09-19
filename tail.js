@@ -16,4 +16,4 @@ assertEqual(words.length, 3);
 
 words = [];
 tail(words);
-assertEqual(words.length, 3);
+assertEqual(words.length, 3);   
