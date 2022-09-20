@@ -12,10 +12,10 @@ function eqArrays(a, b) {
   return result; 
 }
 
-function assertArraysEqual(arr1, arr2) {
-  eqArrays(arr1, arr2) ? 
-  console.log(`✅✅✅ Assertion Passed: ${arr1} === ${arr2}`) :
-  console.log(`🛑🛑🛑 Assertion Failed: ${arr1} !== ${arr2}`);
+function assertArraysEqual(actual, expected) {
+  eqArrays(actual, expected) ? 
+  console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`) :
+  console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
 }
 
 assertArraysEqual([1, 2, 3], [1, 2, 3]);
