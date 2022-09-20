@@ -12,7 +12,6 @@ function eqArrays(a, b) {
   a.forEach((num1, i) => {
     const num2 = b[i];
     if (num1 !== num2) {
-      //console.log(num1, num2)
       result = false;
     }
   });
