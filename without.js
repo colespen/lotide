@@ -6,20 +6,8 @@ const without = function(source, itemRemove) {
   return newArr;
 };
 
-//without([1, 2, 3], [1]) // => [2, 3]
-//without(["1", "2", "3"], [1, 2, "3"]) // => ["1", "2"]
 
-assertArraysEqual(without([1, 2, 3], [1]), [2, 3]); // => Assertion Passed: 2,3 === 2,3
-assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]);
-assertArraysEqual(without([21, "12", "14.5", 900], ["900", 21, 14.5]), [ '12', '14.5', 900 ]);
-
-const words = ["hello", "world", "lighthouse"];
-without(words, ["lighthouse"]); // no need to capture return value for this test case
-// Make sure the original array was not altered by the without function
-assertArraysEqual(words, ["hello", "world", "lighthouse"]);
-
-
-// Helper Functions Copied Over
+// Helper Functions Copied
 
 const eqArrays = function(a, b) {
   let result = true;
@@ -34,14 +22,25 @@ const eqArrays = function(a, b) {
   });
   return result;
 };
+
 const assertArraysEqual = function(actual, expected) {
   eqArrays(actual, expected) ?
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`) :
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
 };
 
+assertArraysEqual(without([1, 2, 3], [1]), [2, 3]);
+assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]);
+assertArraysEqual(without([21, "12", "14.5", 900], ["900", 21, 14.5]), [ '12', '14.5', 900 ]);
+
+const words = ["hello", "world", "lighthouse"];
+without(words, ["lighthouse"]); // no need to capture return value for this test case
+// Make sure the original array was not altered by the without function
+assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 
 
+
+// Old work -- didn't work correctly
 
 // function without(source, itemRemove) {
 //   let arr = [];
