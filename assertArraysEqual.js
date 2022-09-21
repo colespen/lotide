@@ -9,17 +9,18 @@ const eqArrays = function(a, b) {
       result = false;
     }
   });
-  return result; 
-}
+  return result;
+};
 
 const assertArraysEqual = function(actual, expected) {
-  eqArrays(actual, expected) ? 
-  console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`) :
-  console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-}
+  eqArrays(actual, expected) ?
+    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`) :
+    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
+};
 
 assertArraysEqual([1, 2, 3], [1, 2, 3]);
 assertArraysEqual([1, 2, 3], [3, 2, 1]);
 assertArraysEqual([43, 42, 41], [43, 42, 41]);
 assertArraysEqual(["10", "20", "30"], ["10", "20", "30"]);
 assertArraysEqual(["1", "2", 3], ["1", "2", "3"]);
+
