@@ -22,15 +22,14 @@ const assertArraysEqual = function(actual, expected) {
 const letterPositions = function(str) {
   const results = {};
   for (const i in str) {
-    if (str[i] === " ") {
+    const letter = str[i];
+    if (letter === " ") {
       continue;
     }
-
-    if (!results[str[i]]) {
-      results[str[i]] = [];
+    if (!results[letter]) {
+      results[letter] = [];
     }
-
-    results[str[i]].push(Number(i));
+    results[letter].push(Number(i));
   }
   return results;
 };
