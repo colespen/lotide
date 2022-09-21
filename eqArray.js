@@ -1,9 +1,3 @@
-const assertEqual = function(actual, expected) {
-  actual === expected ?
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`) :
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-};
-
 const eqArrays = function(a, b) {
   let result = true;
   if (a.length !== b.length) {
@@ -18,11 +12,21 @@ const eqArrays = function(a, b) {
   return result; 
 }
 
+// Copied Assertion function
+
+const assertEqual = function(actual, expected) {
+  actual === expected ?
+    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`) :
+    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
+};
+
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); 
 assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false);
 
 assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true);
 assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false);
+
+
 
 /*
 let arr = [1, 2, 3];
