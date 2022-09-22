@@ -16,5 +16,12 @@ const eqObjects = function(obj1, obj2) {
 };
 
 const assertObjectsEqual = function(actual, expected) {
-  
-}
+  const inspect = require('util').inspect;
+  console.log(`Example label: ${inspect(actual)}`);
+  eqObjects(actual, expected) ?
+    console.log(`✅✅✅ Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`) :
+    console.log(`🛑🛑🛑 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`);
+};
+assertObjectsEqual({ a: 1, b: 2, c: 3 }, { a: 1, b: 2, c: 3 });
+
+module.exports = { assertObjectsEqual }

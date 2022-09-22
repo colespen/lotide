@@ -15,5 +15,5 @@ assertEqual(323, 33.3);
 assertEqual(33.3, 33.3);
 
 
-module.exports = {assertEqual}
+module.exports = { assertEqual }
 
