@@ -32,9 +32,11 @@ const assertArraysEqual = function(actual, expected) {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
 };
 
-//flatten([1, [2, 4, 6, 4, 2], 3, 4, 5, 6, [33, 2, -6, 2.4], 9]);
+arr1a = [1, 2, [3, 4], 5, [6]];
+arr1b = [1, 2, 3, 4, 5, 6];
+arr2a = [1, [2, 4, 6, 4, 2], 3, 4, 5, 6, [33, 2, -6, 2.4], 9];
+arr2b = [1, 2, 4, 6, 4, 2, 3, 4, 5, 6, 33, 2, -6, 2.4, 9];
 
-assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
+assertArraysEqual(flatten(arr1a), arr1b);
 
-assertArraysEqual(flatten([1, [2, 4, 6, 4, 2], 3, 4, 5, 6, [33, 2, -6, 2.4], 9]),
-  [1, 2, 4, 6, 4, 2, 3, 4, 5, 6, 33, 2, -6, 2.4, 9]);
+assertArraysEqual(flatten(arr2a), arr2b);
