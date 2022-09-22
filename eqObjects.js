@@ -20,8 +20,8 @@ const eqArrays = function(a, b) {
 
 
 const eqObjects = function(obj1, obj2) {
-  key1 = Object.keys(obj1);
-  key2 = Object.keys(obj2);
+  const key1 = Object.keys(obj1);
+  const key2 = Object.keys(obj2);
   if (key1.length !== key2.length) {
     return false;
   }
@@ -43,7 +43,6 @@ const cd2 = { c: "1", d: ["2", 3, 4] };
 
 assertEqual(eqObjects(cd, dc), true); // => true
 assertEqual(eqObjects(cd, cd2), false); // => false
-
 
 
 
