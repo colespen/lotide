@@ -10,16 +10,16 @@ const findKey = (obj, callback) => {
       return o;
     }
   }
-}
+};
 
-obj1 = {
+const obj1 = {
   "Blue Hill": { stars: 1 },
   "Akaleri":   { stars: 3 },
   "noma":      { stars: 2 },
   "elBulli":   { stars: 3 },
   "Ora":       { stars: 2 },
   "Akelarre":  { stars: 3 }
-}
+};
 
 //findKey(obj1, x => x.stars === 2) // => "noma"
 
