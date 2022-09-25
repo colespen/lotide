@@ -1,20 +1,23 @@
-const { assertEqual } = require('./assertEqual.js');
+const assertEqual = require('./assertEqual');
 
 const tail = (arr) => {
-  console.log(arr.slice(1));
+  return arr.slice(1);
 };
 
+
 // Test Case: check original array
-
 let words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words);
-assertEqual(words.length, 3);
+const result1 = tail(words);
+assertEqual(result1.length, 2);
+assertEqual(result1[0], "Lighthouse");
+assertEqual(result1[1], "Labs");
 
-words = ["Labs"];
-tail(words);
-assertEqual(words.length, 3);
+words = ["Lighthouse", "Labs"];
+const result2 = tail(words);
+assertEqual(result2.length, 1);
+assertEqual(result2[0], "Labs");
+assertEqual(result2[-1], undefined);
 
 words = [];
-tail(words);
-assertEqual(words.length, 3);
-
+const result3 = tail(words);
+assertEqual(result3.length, 0);

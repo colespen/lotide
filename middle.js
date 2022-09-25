@@ -1,22 +1,4 @@
-const eqArrays = function(a, b) {
-  let result = true;
-  if (a.length !== b.length) {
-    result = false;
-  }
-  a.forEach((num1, i) => {
-    const num2 = b[i];
-    if (num1 !== num2) {
-      result = false;
-    }
-  });
-  return result;
-};
-
-const assertArraysEqual = function(actual, expected) {
-  eqArrays(actual, expected) ?
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`) :
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-};
+const assertArraysEqual = require('./assertArraysEqual');
 
 const middle = function(array) {
   array.splice(0, 1);
@@ -33,6 +15,7 @@ const middle = function(array) {
   return array;
 };
 
+////  Tests
 assertArraysEqual(middle([1]), []);
 assertArraysEqual(middle([1, 2]), []);
 assertArraysEqual(middle([1, 2, 3]), [2]);
