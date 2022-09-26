@@ -15,8 +15,4 @@ const letterPositions = function(str) {
   return results;
 };
 
-////  Tests
-assertArraysEqual(letterPositions("hello").e, [1]);
-assertArraysEqual(letterPositions("lighthouse in the house").o, [6, 19]);
-assertArraysEqual(letterPositions("Big Basic basket").B, [0, 4]);
-assertArraysEqual(letterPositions("music of the mississippi").s, [ 2, 15, 16, 18, 19 ]);
+module.exports = letterPositions;

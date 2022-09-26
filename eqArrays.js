@@ -12,11 +12,4 @@ const eqArrays = function(a, b) {
   return result;
 };
 
-/*
-eqArrays([[2, 3], [4]], [[2, 3], [4]]); // => true
-
-eqArrays([[2, 3], [4]], [[2, 3], [4, 5]]) // => false
-eqArrays([[2, 3], [4]], [[2, 3], 4]); // => false
-*/
-
 module.exports = eqArrays;
