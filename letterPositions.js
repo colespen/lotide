@@ -1,5 +1,3 @@
-const assertArraysEqual = require('./assertArraysEqual');
-
 const letterPositions = function(str) {
   const results = {};
   for (const i in str) {
